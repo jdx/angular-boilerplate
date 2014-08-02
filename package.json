@@ -1,6 +1,7 @@
 {
   "name": "angular-boilerplate",
   "version": "1.0.0",
+  "license": "ISC",
   "repository": {
     "github": "dickeyxxx/angular-boilerplate"
   },
