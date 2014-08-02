@@ -1,7 +1,7 @@
 Example Angular App
 ===================
 
-[![wercker status](https://app.wercker.com/status/7226856f48f0ccaa877efd6302126765/m "wercker status")](https://app.wercker.com/project/bykey/7226856f48f0ccaa877efd6302126765)
+[![wercker status](https://app.wercker.com/status/7226856f48f0ccaa877efd6302126765/m/master "wercker status")](https://app.wercker.com/project/bykey/7226856f48f0ccaa877efd6302126765)
 
 This is a demo app you can use to get starting writing an angular app of your own.
 
