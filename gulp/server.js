@@ -1,5 +1,5 @@
 var gulp = require('gulp')
 
 gulp.task('server', function () {
-  require(__dirname + '/../server')
+  require(__dirname + '/../boot')
 })
