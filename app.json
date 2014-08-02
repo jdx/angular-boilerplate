@@ -1,0 +1,7 @@
+{
+  "name": "Angular.js Boilerplate",
+  "description": "A barebones Angular.js app",
+  "repository": "https://github.com/dickeyxxx/angular-boilerplate",
+  "logo": "https://angular-boilerplate.herokuapp.com/angularjs.png",
+  "keywords": ["node", "express", "static", "angular"]
+}
