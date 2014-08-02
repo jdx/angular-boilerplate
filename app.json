@@ -1,7 +1,12 @@
 {
   "name": "Angular.js Boilerplate",
   "description": "A barebones Angular.js app",
+  "website": "https://angular-boilerplate.herokuapp.com",
   "repository": "https://github.com/dickeyxxx/angular-boilerplate",
   "logo": "https://angular-boilerplate.herokuapp.com/angularjs.png",
-  "keywords": ["node", "express", "static", "angular"]
+  "keywords": ["node", "express", "static", "angular"],
+  "success_url": "/",
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
