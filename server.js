@@ -6,7 +6,7 @@ var app = express()
 var production = (process.env.NODE_ENV === 'production')
 
 // use morgan logger
-app.use(logger('combined'))
+app.use(logger(production ? 'combined' : 'dev'))
 
 // gzip
 app.use(compression())
