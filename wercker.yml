@@ -18,8 +18,8 @@ build:
 
     - npm-install
 
-      - script:
-        name: update webdriver
-        code: ./node_modules/.bin/webdriver-manager update
+    - script:
+      name: update webdriver
+      code: ./node_modules/.bin/webdriver-manager update
 
-      - npm-test
+    - npm-test
