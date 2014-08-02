@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Users</h1>
+  <form class='form-inline' ng-submit='search(q)'>
+    <div class="form-group">
+      <input class='form-control' type="search" ng-model='q'>
+    </div>
+    <input type="submit" class='btn btn-primary' value='Search'>
+  </form>
+  <ul class='users'>
+    <li ng-repeat="user in users">
+      <a href="/users/{{user.login}}">
+        {{user.login}}
+      </a>
+    </li>
+  </ul>
+</div>

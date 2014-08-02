@@ -1,0 +1,15 @@
+<div class="container">
+  <h1><a ng-href='https://github.com/{{user.login}}'>{{user.login}}</a></h1>
+  <p>Followers: {{user.followers}}</p>
+  <p>{{user.location}}</p>
+  <p>{{user.company}}</p>
+  <p>{{user.website}}</p>
+  <p><a ng-href='{{user.blog}}'>{{user.blog}}</a></p>
+  <img ng-src="{{user.avatar_url}}">
+  <h2>Repositories</h2>
+  <ul class='repos'>
+    <li ng-repeat="repo in repos">
+      <a href='https://github.com/{{repo.full_name}}'>{{repo.full_name}}</a>
+    </li>
+  </ul>
+</div>
