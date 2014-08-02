@@ -5,7 +5,7 @@ build:
 
     - script:
         name: update webdriver
-        code: node_modules/.bin/webdriver-manager update
+        code: ./node_modules/.bin/webdriver-manager update
 
     - npm-test
 
