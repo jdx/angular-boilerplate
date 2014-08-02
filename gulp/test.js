@@ -15,4 +15,3 @@ gulp.task('test', ['server:test', 'jshint'], shell.task([
   'protractor',
   'kill ' + process.pid // kill the test server
 ]))
-
