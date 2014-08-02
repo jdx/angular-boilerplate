@@ -1,3 +1,3 @@
 angular.module('app')
-.controller('ApplicationCtrl', function ($scope) {
+.controller('ApplicationCtrl', function () {
 })

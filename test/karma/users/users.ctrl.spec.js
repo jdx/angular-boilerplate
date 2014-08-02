@@ -3,7 +3,7 @@
 describe('users', function () {
   describe('users.ctrl', function () {
     beforeEach(module('users'))
-    var ctrl, $scope, GithubUserSvc, $q
+    var $scope, GithubUserSvc, $q
 
     var users = [
       {login: 'dickeyxxx'},
@@ -25,7 +25,7 @@ describe('users', function () {
       $q = _$q_
       $scope = $rootScope.$new()
       GithubUserSvc = fakeGithubService()
-      var ctrl = $controller('UsersCtrl', {
+      $controller('UsersCtrl', {
         $scope: $scope,
         GithubUserSvc: GithubUserSvc
       })
