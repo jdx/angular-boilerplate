@@ -1,5 +1,9 @@
 {
   "name": "angular-boilerplate",
+  "version": "1.0.0",
+  "repository": {
+    "github": "dickeyxxx/angular-boilerplate"
+  },
   "scripts": {
     "test": "gulp test"
   },
