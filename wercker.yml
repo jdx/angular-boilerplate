@@ -1,15 +1,15 @@
 box: wercker/nodejs
-# Build definition
 build:
-  # The steps that will be executed on build
   steps:
-    # A step that executes `npm install` command
     - npm-install
-    # A step that executes `npm test` command
+
+    - script:
+      name: update webdriver
+      code: |
+        $(npm bin)/webdriver-manager update
+
     - npm-test
 
-    # A custom script step, name value is used in the UI
-    # and the code value contains the command that get executed
     - script:
         name: echo nodejs information
         code: |
