@@ -2,7 +2,7 @@
 
 describe('users', function () {
   it('can find this repo', function () {
-    browser.get('http://localhost:3000')
+    browser.get('http://localhost:3001')
     element(by.css('nav a.users')).click()
     var search = element(by.model('q'))
     search.sendKeys('dickey').sendKeys(protractor.Key.ENTER)

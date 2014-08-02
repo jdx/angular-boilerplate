@@ -10,8 +10,9 @@ gulp.task('jshint', function () {
     .pipe(jshint.reporter('fail'))
 })
 
-gulp.task('test', ['jshint'], shell.task([
+gulp.task('test', ['server:test', 'jshint'], shell.task([
   'node_modules/karma/bin/karma start --single-run',
-  'protractor'
+  'protractor',
+  'kill ' + process.pid // kill the test server
 ]))
 
