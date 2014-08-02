@@ -4,8 +4,8 @@ build:
     - npm-install
 
     - script:
-      name: update webdriver
-      code: webdriver-manager update
+        name: update webdriver
+        code: webdriver-manager update
 
     - npm-test
 
