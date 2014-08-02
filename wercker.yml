@@ -5,8 +5,7 @@ build:
 
     - script:
       name: update webdriver
-      code: |
-        $(npm bin)/webdriver-manager update
+      code: webdriver-manager update
 
     - npm-test
 
