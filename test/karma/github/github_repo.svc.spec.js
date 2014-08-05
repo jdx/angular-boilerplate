@@ -24,7 +24,7 @@ describe('github', function () {
 
       it('loads the repos for a user', function () {
         GithubRepoSvc.fetchByUser().then(function (repos) {
-          expect(repos.length).toBe(2)
+          expect(repos).to.have.length(2)
         })
       })
     })

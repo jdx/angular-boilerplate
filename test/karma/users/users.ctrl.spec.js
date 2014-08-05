@@ -3,44 +3,47 @@
 describe('users', function () {
   describe('users.ctrl', function () {
     beforeEach(module('users'))
-    var $scope, GithubUserSvc, $q
+    var $scope
+
+    var fakeGithubService = {}
 
     var users = [
       {login: 'dickeyxxx'},
       {login: 'defunkt'}
     ]
 
-    function fakeGithubService() {
-      var deferredUsers = $q.defer()
-      var deferredSearch = $q.defer()
-      deferredUsers.resolve(users)
-      deferredSearch.resolve([users[0]])
-      return {
-        fetch: jasmine.createSpy('fetch').andReturn(deferredUsers.promise),
-        search: jasmine.createSpy('fetch').andReturn(deferredSearch.promise)
+    beforeEach(inject (function ($q) {
+      fakeGithubService.fetch = function () {
+        var deferred = $q.defer()
+        deferred.resolve(users)
+        return deferred.promise
       }
-    }
+      fakeGithubService.search = function () {
+        var deferred = $q.defer()
+        deferred.resolve([users[0]])
+        return deferred.promise
+      }
+    }))
 
-    beforeEach(inject(function ($rootScope, $controller, _$q_) {
-      $q = _$q_
+    beforeEach(inject(function ($rootScope, $controller) {
       $scope = $rootScope.$new()
-      GithubUserSvc = fakeGithubService()
       $controller('UsersCtrl', {
         $scope: $scope,
-        GithubUserSvc: GithubUserSvc
+        GithubUserSvc: fakeGithubService
       })
     }))
 
     it('loads the users', function () {
       $scope.$digest()
-      expect($scope.users.length).toBe(2)
+      expect($scope.users).to.have.length(2)
     })
 
     it('searches for users', function () {
+      sinon.spy(fakeGithubService, 'search')
       $scope.search('dickeyxxx')
       $scope.$digest()
-      expect(GithubUserSvc.search).toHaveBeenCalledWith('dickeyxxx')
-      expect($scope.users.length).toBe(1)
+      expect($scope.users).to.have.length(1)
+      expect(fakeGithubService.search).to.have.been.calledWith('dickeyxxx')
     })
   })
 })

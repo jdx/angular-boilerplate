@@ -1,12 +1,17 @@
 exports.config = {
-  capabilities: {
-    browserName: 'firefox'
-  },
-  specs: [
-    'test/protractor/**/*.spec.js'
+  multiCapabilities: [
+    { 'browserName': 'chrome' },
+    { 'browserName': 'firefox' }
   ],
-  onPrepare: function () {
-    process.env.PORT = 3001
-    require('./boot')
+
+  onPrepare: './test/e2e/init.js',
+
+  framework: 'mocha',
+  specs: [
+    'test/e2e/**/*.spec.js'
+  ],
+
+  mochaOpts: {
+    enableTimeouts: false
   }
 }

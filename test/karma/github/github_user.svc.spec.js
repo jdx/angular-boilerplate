@@ -24,7 +24,7 @@ describe('github', function () {
 
       it('pulls down users', function () {
         GithubUserSvc.fetch().then(function (users) {
-          expect(users.length).toBe(2)
+          expect(users).to.have.length(2)
         })
       })
     })
@@ -38,7 +38,7 @@ describe('github', function () {
 
       it('pulls down dickeyxxx', function () {
         GithubUserSvc.find('dickeyxxx').then(function (users) {
-          expect(users.login).toBe('dickeyxxx')
+          expect(users.login).to.equal('dickeyxxx')
         })
       })
     })
@@ -52,7 +52,7 @@ describe('github', function () {
 
       it('searches for dickeyxxx', function () {
         GithubUserSvc.search('dickeyxxx').then(function (users) {
-          expect(users.length).toBe(2)
+          expect(users).to.have.length(2)
         })
       })
     })

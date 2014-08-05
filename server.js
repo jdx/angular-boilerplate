@@ -5,8 +5,10 @@ var compression = require('compression')
 var app = express()
 var production = (process.env.NODE_ENV === 'production')
 
-// use morgan logger
-app.use(logger(production ? 'combined' : 'dev'))
+if (process.env.LOG_LEVEL !== 'warn') {
+  // use morgan logger
+  app.use(logger(production ? 'combined' : 'dev'))
+}
 
 // gzip
 app.use(compression())

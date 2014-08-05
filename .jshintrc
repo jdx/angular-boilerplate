@@ -22,6 +22,9 @@
     "trailing": true,
     "undef": true,
     "unused": true,
+    "globals": {
+      "expect": true
+    },
     "predef": [
       "afterEach",
       "angular",
@@ -30,10 +33,10 @@
       "by",
       "describe",
       "element",
-      "expect",
       "inject",
       "it",
       "jasmine",
-      "protractor"
+      "protractor",
+      "sinon"
     ]
 }
