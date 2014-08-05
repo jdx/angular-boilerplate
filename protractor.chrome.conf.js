@@ -1,8 +1,7 @@
 exports.config = {
   capabilities: {
-    browserName: 'firefox'
+    browserName: 'chrome'
   },
-
   onPrepare: './test/e2e/init.js',
 
   framework: 'mocha',

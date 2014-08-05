@@ -22,17 +22,7 @@ build:
           name: update webdriver
           code: ./node_modules/.bin/webdriver-manager update
 
-      - script:
-          name: jshint
-          code: ./node_modules/.bin/jshint .
-
-      - script:
-          code: karma
-          code: ./node_modules/karma/bin/karma start --single-run
-
-      - script:
-          code: protractor (firefox)
-          code: ./node_modules/.bin/protractor --browser=firefox
+      - npm-test
 
 deploy:
     steps:
