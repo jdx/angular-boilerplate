@@ -20,11 +20,11 @@ build:
 
       - script:
           name: update webdriver
-          code: webdriver-manager update
+          code: ./node_modules/.bin/webdriver-manager update
 
       - script:
           name: jshint
-          code: jshint .
+          code: ./node_modules/.bin/jshint .
 
       - script:
           code: karma
@@ -32,7 +32,7 @@ build:
 
       - script:
           code: protractor (firefox)
-          code: protractor --browser=firefox
+          code: ./node_modules/.bin/protractor --browser=firefox
 
 deploy:
     steps:
