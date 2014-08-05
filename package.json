@@ -9,7 +9,7 @@
     "node": "0.10.30"
   },
   "scripts": {
-    "test": "jshint . && gulp build && karma start --single-run && protractor",
+    "test": "jshint . && gulp build && ./node_modules/karma/bin/karma start --single-run && protractor",
     "start": "node server.js",
     "postinstall": "bower install && gulp build"
   },
