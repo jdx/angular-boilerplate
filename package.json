@@ -19,6 +19,7 @@
     "jshint": "^2.5.2",
     "karma": "^0.12.21",
     "karma-chai": "^0.1.0",
+    "karma-coverage": "^0.2.5",
     "karma-mocha": "^0.1.6",
     "karma-phantomjs-launcher": "^0.1.4",
     "karma-sinon-chai": "^0.2.0",
