@@ -60,7 +60,7 @@ Structure
 
 ```
 │
-├── LICENSE.txt               ISC
+├── LICENSE                   ISC
 ├── README.md                 this file
 ├── app.json                  defines how to deploy on Heroku
 ├── bower.json                defines third-party css/js - downloads to /assets
